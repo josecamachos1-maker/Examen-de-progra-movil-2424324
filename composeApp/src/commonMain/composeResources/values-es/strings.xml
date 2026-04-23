@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Food App</string>
+    <string name="explore">Explorar</string>
+    <string name="sign_in_title">Registrar</string>
+    <string name="sign_in_email">Email</string>
+    <string name="sign_in_password">Contraseña</string>
+    <string name="sign_in_btn">Registrarse</string>
+    <string name="login_title">Registrarse(Prueba)</string>
+    <string name="login_email">Email Direccion</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_btn">Registrarse</string>
+    <string name="github_find">Encontrar</string>
+    <string name="github_title">Encontrar tu avatar de GitHub</string>
+    <string name="github_text_hint">Usuario de GitHub</string>
+
+    <string name="category_electronics">Electrónica</string>
+    <string name="category_jewelery">Joyería</string>
+    <string name="category_men_clothing">Ropa de hombre</string>
+    <string name="category_women_clothing">Ropa de mujer</string>
+</resources>
