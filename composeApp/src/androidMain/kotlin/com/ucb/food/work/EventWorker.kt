@@ -21,19 +21,15 @@ class EventWorker(
         val eventType = inputData.getString("EVENT_TYPE") ?: return Result.failure()
         val timestamp = System.currentTimeMillis()
 
-        // 1. Guardar en Room
         db.getEventDao().insert(
             AppEventEntity(timestamp = timestamp, eventType = eventType)
         )
 
-        // 2. Replicar en Firebase si hay conexión
         try {
-            val path = "app_events/$timestamp"
+            val path = "user_activity_logs/$timestamp"
             val value = "Event: $eventType at $timestamp"
             firebaseManager.saveData(path, value)
         } catch (e: Exception) {
-            // Si falla la red, WorkManager puede reintentar si quisiéramos, 
-            // pero para un log simple, con Room es suficiente.
         }
 
         return Result.success()
